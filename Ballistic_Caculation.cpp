@@ -18,13 +18,15 @@ int main()
     for (int i = 0; i < iteration_count; i++)
     {
 
-        angle = asin(CaculateSIN());
         realPoint = CaculateRealpoint();
         deltaZ = CaculateDeltaZ();
         tempPoint += deltaZ;
-        //printf("targetPoint%f,realPoint%f,angle%f,deltaZ%f\n", targetPoint, realPoint, angle, deltaZ);
+        angle = asin(CaculateSIN());
+        // printf("targetPoint%f,realPoint%f,angle%f,deltaZ%f\n", targetPoint, realPoint, angle, deltaZ);
     }
     printf("angle:%f radians   %f degrees", angle, angle / (180.0 / M_PI));
+    // angle:0.137424 radians   0.002399 degrees
+    // 应有两解，但另一解接近垂直发射，不具有实际应用意义
 }
 
 float CaculateRealpoint()
