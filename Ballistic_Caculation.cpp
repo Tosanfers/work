@@ -7,7 +7,7 @@ float CaculateCOS();
 float CaculateSIN();
 float CaculateDeltaZ();
 
-float k = 0.38, k_1 = 0.019;
+float k = 0.038, k_1 = 0.019;
 float s = 5, targetPoint = 0.25, v_0 = 17,
       tempPoint, angle, realPoint, deltaZ;
 int iteration_count = 20;
@@ -22,9 +22,9 @@ int main()
         realPoint = CaculateRealpoint();
         deltaZ = CaculateDeltaZ();
         tempPoint += deltaZ;
-        printf("targetPoint%f,realPoint%f,angle%f,deltaZ%f\n", targetPoint, realPoint, angle, deltaZ);
+        //printf("targetPoint%f,realPoint%f,angle%f,deltaZ%f\n", targetPoint, realPoint, angle, deltaZ);
     }
-    printf("%f", CaculateRealpoint());
+    printf("angle:%f radians   %f degrees", angle, angle / (180.0 / M_PI));
 }
 
 float CaculateRealpoint()
